@@ -1,0 +1,90 @@
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #F5E6D3;
+  padding: 150px 0; /* Üst ve alt boşluk */
+}
+
+/* Hizmetler bölümü */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  max-width: 90%;
+}
+
+.service-item {
+  width: 80%; /* Hizmetleri iki sütun halinde yerleştirir */
+  height: 800px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-top: 3px solid black;
+  background-color: transparent;
+  
+  border-radius: 8px;
+}
+
+.service-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 5%;
+  background-color: black;
+}
+
+/* Başlık */
+.service-item h2 {
+
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+/* Açıklama metni */
+.service-item p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+/* Tabletlerde ve mobilde düzen */
+@media screen and (max-width: 768px) {
+  .service-item {
+    width: 80%;
+    max-width: 90%;
+  }
+
+  .service-item h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-item p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-item {
+    width: 100%;
+  }
+
+  .service-item h2 {
+    font-size: 1.6rem;
+  }
+
+  .service-item p {
+    font-size: 1.1rem;
+  }
+}

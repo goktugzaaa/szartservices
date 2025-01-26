@@ -1,0 +1,76 @@
+.hero-section {
+  position: relative;
+  height: 100vh; /* Tüm ekran yüksekliği */
+  width: 100%;
+  background-image: url('https://www.smu.edu/-/media/site/meadows/facultystaff/amae/arts-management_nonprofit.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Karartma efekti */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px; /* Küçük ekranlarda taşmayı engeller */
+}
+
+.title {
+  font-size: 6vw; /* Genişlik birimine bağlı yazı boyutu */
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.slogan {
+  font-size: 2vw; /* Genişlik birimine bağlı yazı boyutu */
+  color: white;
+  margin-top: 10px;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Tabletler için (768px ve altı) */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 8vw; /* Yazı boyutunu biraz büyüt */
+  }
+
+  .slogan {
+    font-size: 4vw;
+  }
+
+  .overlay {
+    padding: 10px; /* Daha sıkı bir görünüm için daralt */
+  }
+}
+
+/* Mobil cihazlar için (480px ve altı) */
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 16vw;
+    margin-bottom: 50px; /* Başlık boyutunu daha da büyüt */
+  }
+
+  .slogan {
+    font-size: 5vw;
+    max-width: 50%;
+    margin-top: 30px;
+  }
+
+  .overlay {
+    padding: 5px; /* Kenar boşluklarını azalt */
+  }
+}
+
+

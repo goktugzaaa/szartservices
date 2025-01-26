@@ -1,0 +1,18 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden; /* Yatay kaydırmayı engeller */
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+    body {
+        font-family: 'Playfair Display', serif;
+       /* background-color: #FDF2DE;*/
+       background-color: white;
+    }  
+  
