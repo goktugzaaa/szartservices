@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Services.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
 
 const services = [
   {
@@ -45,15 +49,29 @@ const services = [
 ];
 
 const Services = () => {
+  const [activeService, setActiveService] = useState(null);
+
+  const toggleService = (index) => {
+    setActiveService(activeService === index ? null : index);
+  };
+
   return (
     <div className="services-container">
       <h1 className="main-title">Hizmetlerimiz</h1>
       <div className="services-list">
         {services.map((service, index) => (
-          <div className="service-item" key={index}>
-            <div className="service-title">
+          <div 
+            className={`service-item ${activeService === index ? 'active' : ''}`} 
+            key={index}
+            onClick={() => toggleService(index)}
+          >
+            <div className={`service-title ${activeService === index ? 'active' : ''}`}>
               <h2>{service.title}</h2>
             </div>
+            <FontAwesomeIcon 
+                icon={faChevronRight} 
+                className={`service-arrow ${activeService === index ? 'active' : ''}`}
+              />
             <div className="service-description">
               <p>{service.description}</p>
             </div>

@@ -6,7 +6,7 @@ const AboutSection = () => {
   const isHomePage = location.pathname === "/";
 
   return (
-    <div className="about-section-container">
+    <div className={`about-section-container ${isHomePage ? "" : "section"}`}>
       <section className="about-section">
         <div className="about-title-container">
           <h2 className={`about-title ${isHomePage ? "left" : "center"}`}>Hakkımızda</h2>
@@ -15,13 +15,9 @@ const AboutSection = () => {
           <p className="about-text">
             {isHomePage ? (
               <>
-                SZ Art Services, Türkiye’nin ilk kültür-sanat-tasarım
-                danışmanlık ajansı olarak, prodüksiyondan stratejiye,
-                arşivden izleyici geliştirmeye uzanan kapsamlı hizmetler
-                sunar. Sanatçıları, kurumları ve izleyicileri bir araya
-                getirerek, sanat ve hayat arasındaki güçlü bağı temel alan,
-                sürdürülebilir ve esnek bir yapı oluşturur. SZ Art Services
-                ile sanat ve kültür alanında fark yaratın.
+                 SZ Art Services olarak Türkiye’nin ilk sanat ve tasarım danışmanlık ajansıyız.
+                 Sanatçıları, kurumları ve izleyicileri bir araya getiriyor, sanat ve hayat arasındaki bağı güçlendiren çözümler sunuyoruz.
+                  Bizimle fark yaratın!"
               </>
             ) : (
               <>

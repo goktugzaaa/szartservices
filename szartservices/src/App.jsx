@@ -8,6 +8,7 @@ import Services from './pages/Services';   // Hizmetler bileşeni
 import Artists from './pages/Artists';     // Sanatçılar bileşeni
 import Journal from './pages/Journal';     // Jurnal bileşeni
 import Contact from './pages/Contact';     // İletişim bileşeni
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       {/* Navbar her sayfada gösterilecek */}
       <Navbar />
       {/* Route yapılandırması */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

@@ -23,11 +23,11 @@ const Navbar = () => {
           to="/"
           className={`logo ${isOpen ? "menu-open" : ""}`} style = {{display: isHomePage && !isOpen ? "none" : "block", color: isHomePage ? "black" : "black"}}
           onClick={closeMenu}
-        >
-          SZArtServices
+        > <span>SZArtServices</span>
+          
         </Link>
       </div>
-      <div className="hamburger-btn" onClick={toggleMenu}>
+      <div className={`hamburger-btn`} onClick={toggleMenu}>
         <div
           className={`hamburger-bar ${isOpen ? "open" : ""} ${
             isHomePage ? "home-page" : "other-page"
