@@ -1,6 +1,6 @@
 .projects-slide-container {
     margin-top: 10%;
-    padding: 20px 50px;
+    padding: 20px 10px;
     width: 100%;
     max-width: 95%; /* max-w-4xl */
     margin-left: auto;
@@ -26,7 +26,7 @@
     font-weight: 500;
     letter-spacing: 2px;
     margin-bottom: 20px;
-    margin-left: -25px;
+    
 }
 
 /* Başlık */
@@ -72,6 +72,27 @@
     text-align: center;
     width: 100%; /* Genişlik görsele göre ayarlanıyor */
 }
+/* Önceki ve sonraki okların stilini özelleştirme */
+.swiper-button-next,
+.swiper-button-prev {
+  color: black; /* Okların rengini siyah yap */
+  font-weight: bold; /* Okların kalınlığını artır */
+  font-size: 2em; /* Okların boyutunu ayarla */
+}
+
+/* Sonraki okun içeriğini -> olarak ayarla */
+.swiper-button-next::after {
+  content: '→';
+  font-size: 2em;
+  margin-right: 50px;
+}
+
+/* Önceki okun içeriğini <- olarak ayarla */
+.swiper-button-prev::after {
+  content: '←';
+  font-size: 2em;
+  margin-left: 50px;
+}
 
 /* Masaüstü düzeni */
 @media (min-width: 768px) {
@@ -105,4 +126,54 @@
         line-height: 29px;
         margin-top: 50px; /* Görsel ile açıklama arasında boşluk */
     }
+}
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .project-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .project-description {
+        margin-top: 0;
+        font-size: 1.4rem;
+        color: black;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .project-image {
+        width: 80%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .project-description {
+        margin-top: 0;
+        font-size: 1.2rem;
+        color: black;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+       display: none;
+}
 }

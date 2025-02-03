@@ -1,4 +1,3 @@
-/* Varsayılan (masaüstü) stil */
 .hamburger-btn {
   position: fixed;
   top: 50px;
@@ -19,7 +18,9 @@
   position: relative;
   transition: all 0.3s ease-in-out;
 }
-.hamburger-bar.other-page{
+
+
+.hamburger-bar.other-page {
   background-color: black;
 }
 
@@ -32,20 +33,15 @@
   background-color: white;
   transition: all 0.3s ease-in-out;
 }
-.hamburger-bar::before.other-page,
-.hamburger-bar::after.other-page{
+
+
+.hamburger-bar.other-page::before,
+.hamburger-bar.other-page::after {
   background-color: black;
 }
 
 .hamburger-bar::before {
   transform: translateY(-10px);
-  
-}
-.hamburger-bar.other-page::after {
-  background-color: black;
-}
-.hamburger-bar.hamburger-bar.other-page::before {
-  background-color: black;
 }
 
 .hamburger-bar::after {
@@ -110,36 +106,42 @@
   flex-direction: column;
   gap: 1rem;
   margin-left: 5%;
-  width: 90%;
+  width: 100%;
 }
 
 .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 2.2rem;
   color: #000;
   text-decoration: none;
   position: relative;
   padding: 0.5rem 1.5rem;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: all 0.3s ease-in-out;
   width: 90%;
   border-top: 2px solid #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+.menu-item::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 80%;
+  background-color: #000;
 }
 
 
 .menu-item span {
-  position: relative;
+    flex-grow: 1; /* Yazıyı sola yaslamak için */
 }
 
-.menu-item span::after {
+.menu-item::after {
   content: '→';
   position: absolute;
-  right: 40px;
-  opacity: 0;
-  transition: all 0.3s ease;
+  right: 20px; /* Sağ köşeye yaslamak için */
+  opacity: 1; /* Sürekli görünür yapmak için */
+  transition: none; /* Hover ile değişmesini engellemek için */
 }
 
 .menu-item:hover span::after {
@@ -156,7 +158,7 @@
 .menu-item:nth-child(2) { transition-delay: 0.1s; }
 .menu-item:nth-child(3) { transition-delay: 0.15s; }
 .menu-item:nth-child(4) { transition-delay: 0.2s; }
-.menu-item:nth-child(5) { transition-delay: 0.25s; } 
+.menu-item:nth-child(5) { transition-delay: 0.25s; }
 .menu-item:nth-child(6) { transition-delay: 0.3s; }
 
 /* Ekran boyutlarına göre responsive tasarım */
@@ -167,7 +169,7 @@
     width: 45px;
     height: 45px;
   }
-  
+
   .logo {
     top: 3%;
     left: 5%;
@@ -186,7 +188,7 @@
     width: 40px;
     height: 40px;
   }
-  
+
   .logo {
     top: 3%;
     left: 5%;
@@ -200,19 +202,32 @@
 
 @media screen and (max-width: 480px) {
   .hamburger-btn {
-    top: 10px;
-    right: 20px;
+    top: 3%;
+    right: 30px;
     width: 35px;
     height: 35px;
   }
-  
+
   .logo {
     top: 3%;
     left: 5%;
     font-size: 1.8rem;
   }
+  .menu-items{
+    gap:0.5rem;
+  }
 
   .menu-item {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    border-top: 1px solid #000; 
   }
+  .menu-item::before{
+    width: 1px;
+  }
+.menu-item:nth-child(1) { transition-delay: 0.05s; }
+.menu-item:nth-child(2) { transition-delay: 0.05s; }
+.menu-item:nth-child(3) { transition-delay: 0.05s; }
+.menu-item:nth-child(4) { transition-delay: 0.05s; }
+.menu-item:nth-child(5) { transition-delay: 0.05s; }
+.menu-item:nth-child(6) { transition-delay: 0.05s; }
 }

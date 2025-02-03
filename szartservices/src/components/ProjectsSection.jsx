@@ -1,5 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useLocation } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,7 +11,7 @@ import "../styles/ProjectsSection.css";
 const projects = [
   {
     name: "Buluştuğumuz Yer Burası",
-    description: "Bu proje, bir e-ticaret platformu için geliştirilmiş özel bir tasarım içerir.Bu proje, bir e-ticaret platformu için geliştirilmiş özel bir tasarım içerir.Bu proje, bir e-ticaret platformu için geliştirilmiş özel bir tasarım içerir.Bu proje, bir e-ticaret platformu için geliştirilmiş özel bir tasarım içerir.",
+    description: "Bu proje, bir e-ticaret platformu için geliştirilmiş özel bir tasarım içerir.",
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZv-XXiN6cxaoaHrCKGnV_l_oVBo1bqK6XAw&s",
   },
   {
@@ -20,14 +21,21 @@ const projects = [
   },
   {
     name: "UNTITLED 1.0",
-    description: "6-26 Kasım tarihleri arasında sizlerle buluşacak olan, dönemimiz güncel Türk sanatının seçkin örneklerinin yer aldığı seçkide A. C. Levent, Ahmet Rüstem Ekici, Ali Demirci, Asya Koç, Ayça Yücedağ, Azat Yeman, Ekrem Kahraman, Elif Akçay, Ercan Vural, Hakan Sorar, Melih Mankaloğlu, Rafet Arslan, Selim Köroğlu, Serhat Erem, Shahnaz Aghayeva, Ümit Şahin, Yunus Çermik gibi sanatçıların eserleri sergilenecek. Bu hafta sonu Design Week’e, sanata, tasarıma doyacağınız seçkimiz 6 Kasım 2021 Cumartesi; yarın, 14.00’te açılacak.",
+    description:
+      "6-26 Kasım tarihleri arasında sizlerle buluşacak olan, dönemimiz güncel Türk sanatının seçkin örneklerinin yer aldığı seçkide eserler sergilenecek.",
     imageUrl: "https://pbs.twimg.com/media/FD1SlpeWYAQo2gI?format=jpg&name=large",
   },
 ];
 
 const ProjectsSection = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
-    <div className="projects-slide-container">
+    <div
+      className="projects-slide-container"
+      style={{ marginTop: isHomePage ? "1%" : "10%" }}
+    >
       <h3 className="section-title">Projelerimiz</h3>
       <Swiper
         navigation

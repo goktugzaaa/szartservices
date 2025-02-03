@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh; /* Tüm ekran yüksekliği */
   width: 100%;
-  background-image: url('https://www.smu.edu/-/media/site/meadows/facultystaff/amae/arts-management_nonprofit.jpg');
+  background-image: url('https://sevildolmaci.com.tr/wp-content/uploads/2024/11/7.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,9 +12,9 @@
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Karartma efekti */
+  background-color: rgba(0, 0, 0, 0.5); /* Karartma efekti */ 
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +22,7 @@
   text-align: center;
   padding: 20px; /* Küçük ekranlarda taşmayı engeller */
 }
+  
 
 .title {
   font-size: 6vw; /* Genişlik birimine bağlı yazı boyutu */

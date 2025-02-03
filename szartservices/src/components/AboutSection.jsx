@@ -17,7 +17,7 @@ const AboutSection = () => {
               <>
                  SZ Art Services olarak Türkiye’nin ilk sanat ve tasarım danışmanlık ajansıyız.
                  Sanatçıları, kurumları ve izleyicileri bir araya getiriyor, sanat ve hayat arasındaki bağı güçlendiren çözümler sunuyoruz.
-                  Bizimle fark yaratın!"
+                
               </>
             ) : (
               <>
@@ -29,14 +29,14 @@ const AboutSection = () => {
               </>
             )}
           </p>
-          {isHomePage && (
+        </div>
+        {isHomePage && (
           <div className="learn-more-container">
-            <a href="About" className="learn-more">
+            <a href="/about" className="learn-more">
               Learn more <span className="arrow">→</span>
             </a>
           </div>
         )}
-        </div>
         
       </section>
     </div>
